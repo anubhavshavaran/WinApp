@@ -9,7 +9,220 @@
     mc:Ignorable="d"
     Title="WinApp">
 
-    <Grid>
+    <Grid Background="#101114">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border
+            Grid.Column="0"
+            Background="#191A20"
+            Padding="20">
+
+            <StackPanel Spacing="25">
+
+                <TextBlock
+                    Text="NOVA."
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="#8B9CFF"/>
+
+                <StackPanel Spacing="12">
+                    <TextBlock
+                        Text="WORKSPACE"
+                        FontSize="11"
+                        Foreground="#777A89"
+                        Margin="0,10,0,5"/>
+
+                    <Button Content="&#xE80F;  Dashboard"
+                            HorizontalAlignment="Stretch"/>
+
+                    <Button Content="&#xE8A5;  Projects"
+                            HorizontalAlignment="Stretch"/>
+
+                    <Button Content="&#xE713;  Settings"
+                            HorizontalAlignment="Stretch"/>
+                </StackPanel>
+
+                <Border
+                    Background="#242630"
+                    CornerRadius="10"
+                    Padding="12"
+                    Margin="0,20,0,0">
+
+                    <StackPanel Spacing="5">
+                        <TextBlock
+                            Text="Welcome back!"
+                            Foreground="White"
+                            FontWeight="SemiBold"/>
+
+                        <TextBlock
+                            Text="Your workspace is ready."
+                            Foreground="#A0A2B0"
+                            FontSize="12"/>
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content -->
+        <Grid Grid.Column="1" Padding="35">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0">
+                <StackPanel>
+                    <TextBlock
+                        Text="Dashboard"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Foreground="White"/>
+
+                    <TextBlock
+                        Text="Overview of your workspace"
+                        Foreground="#999BAA"
+                        Margin="0,5,0,0"/>
+                </StackPanel>
+
+                <Button
+                    Content=" +  New Project"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Background="#6578F5"
+                    Foreground="White"/>
+            </Grid>
+
+            <!-- Cards -->
+            <Grid Grid.Row="1" Margin="0,30,0,25">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Background="#20222B"
+                        CornerRadius="12"
+                        Padding="20"
+                        Margin="0,0,10,0">
+
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="Total Projects"
+                                   Foreground="#A0A2B0"/>
+                        <TextBlock Text="12"
+                                   FontSize="32"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+                        <TextBlock Text="+2 this month"
+                                   Foreground="#72D6A0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1"
+                        Background="#20222B"
+                        CornerRadius="12"
+                        Padding="20"
+                        Margin="5,0">
+
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="Completed"
+                                   Foreground="#A0A2B0"/>
+                        <TextBlock Text="08"
+                                   FontSize="32"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+                        <TextBlock Text="67% completion"
+                                   Foreground="#72D6A0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2"
+                        Background="#20222B"
+                        CornerRadius="12"
+                        Padding="20"
+                        Margin="10,0,0,0">
+
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="Pending Tasks"
+                                   Foreground="#A0A2B0"/>
+                        <TextBlock Text="04"
+                                   FontSize="32"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+                        <TextBlock Text="Needs attention"
+                                   Foreground="#F2BD69"/>
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+
+            <!-- Recent Activity -->
+            <Border Grid.Row="2"
+                    Background="#20222B"
+                    CornerRadius="12"
+                    Padding="22">
+
+                <StackPanel Spacing="18">
+
+                    <TextBlock
+                        Text="Recent Activity"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Foreground="White"/>
+
+                    <Border Background="#292B36"
+                            CornerRadius="8"
+                            Padding="15">
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Project Alpha"
+                                       Foreground="White"
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="Successfully completed"
+                                       Foreground="#A0A2B0"
+                                       FontSize="12"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#292B36"
+                            CornerRadius="8"
+                            Padding="15">
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Project Beta"
+                                       Foreground="White"
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="Development in progress"
+                                       Foreground="#A0A2B0"
+                                       FontSize="12"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#292B36"
+                            CornerRadius="8"
+                            Padding="15">
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Project Gamma"
+                                       Foreground="White"
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="Waiting for review"
+                                       Foreground="#A0A2B0"
+                                       FontSize="12"/>
+                        </StackPanel>
+                    </Border>
+
+                </StackPanel>
+            </Border>
+
+        </Grid>
     </Grid>
 </Window>
